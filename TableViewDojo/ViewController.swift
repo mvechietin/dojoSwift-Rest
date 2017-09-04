@@ -38,14 +38,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell");
-        var item:NSDictionary = self.repoList.object(at: indexPath.row) as! NSDictionary;
-//        cell.textLabel?.text = item[""];
+        let row = indexPath.row;
+        let item:NSDictionary = self.repoList[row] as! NSDictionary;
+        print(item);
+        cell.textLabel?.text = item["name"] as? String;
         return cell;
     }
     
-    //request //https://api.github.com/search/users?q=ios
+    //request //http://192.168.1.102:3412
     func loadRequest() -> Void {
-        Alamofire.request(URL(string:"http://192.168.1.102:3412")!, method: .get).validate().responseJSON { response in
+        Alamofire.request(URL(string:"https://api.github.com/search/repositories?q=test")!, method: .get).validate().responseJSON { response in
             guard response.result.isSuccess else {
                 print("Error")
                 return
