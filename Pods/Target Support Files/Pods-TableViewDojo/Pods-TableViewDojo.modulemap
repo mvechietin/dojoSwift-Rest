@@ -1,0 +1,6 @@
+framework module Pods_TableViewDojo {
+  umbrella header "Pods-TableViewDojo-umbrella.h"
+
+  export *
+  module * { export * }
+}
