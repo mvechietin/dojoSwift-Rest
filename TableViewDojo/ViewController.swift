@@ -17,7 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Lista";
+        self.title = "Repositórios";
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated);
         loadRequest();
     }
 
@@ -37,12 +41,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell");
+        let customCell:CustomCell = tableView.dequeueReusableCell(withIdentifier: "RepoCustomCell", for: indexPath) as! CustomCell;
         let row = indexPath.row;
         let item:NSDictionary = self.repoList[row] as! NSDictionary;
-        print(item);
-        cell.textLabel?.text = item["name"] as? String;
-        return cell;
+        customCell.repoNameLabel.text = item["name"] as? String;
+        customCell.repoScoreLabel.text = String(format: "Score: %.1f", (item["score"] as? Double)!);
+        return customCell;
     }
     
     //request //http://192.168.1.102:3412
