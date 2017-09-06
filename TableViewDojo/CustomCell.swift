@@ -11,6 +11,11 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     
-    @IBOutlet weak var repoNameLabel: UILabel!
-    @IBOutlet weak var repoScoreLabel: UILabel!
+    @IBOutlet weak var characterName: UILabel!
+    @IBOutlet weak var characterPhoto: UIImageView!
+    
+    func setupCell(character: Character) -> Void {
+        self.characterName.text = character.name;
+        self.characterPhoto.loadImageUsingCache(withUrl: character.pictureURL);
+    }
 }

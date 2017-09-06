@@ -14,6 +14,9 @@
 		EF0B32911F5D702000C84433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0B32901F5D702000C84433 /* Assets.xcassets */; };
 		EF0B32941F5D702000C84433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF0B32921F5D702000C84433 /* LaunchScreen.storyboard */; };
 		EF0B329F1F5ED93400C84433 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B329E1F5ED93400C84433 /* CustomCell.swift */; };
+		EF0B32A11F60198C00C84433 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B32A01F60198C00C84433 /* Webservice.swift */; };
+		EF0B32A41F6025A900C84433 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B32A31F6025A900C84433 /* Character.swift */; };
+		EF0B32A61F60719400C84433 /* UIImageView+CacheURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B32A51F60719400C84433 /* UIImageView+CacheURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		EF0B32931F5D702000C84433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF0B32951F5D702000C84433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF0B329E1F5ED93400C84433 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		EF0B32A01F60198C00C84433 /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		EF0B32A31F6025A900C84433 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		EF0B32A51F60719400C84433 /* UIImageView+CacheURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+CacheURL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		EF0B32881F5D702000C84433 /* TableViewDojo */ = {
 			isa = PBXGroup;
 			children = (
+				EF0B32A21F60259600C84433 /* Custom Objects */,
 				EF0B329B1F5DDC1500C84433 /* Custom Cell */,
 				EF0B32891F5D702000C84433 /* AppDelegate.swift */,
 				EF0B328B1F5D702000C84433 /* ViewController.swift */,
@@ -87,6 +94,8 @@
 				EF0B32901F5D702000C84433 /* Assets.xcassets */,
 				EF0B32921F5D702000C84433 /* LaunchScreen.storyboard */,
 				EF0B32951F5D702000C84433 /* Info.plist */,
+				EF0B32A01F60198C00C84433 /* Webservice.swift */,
+				EF0B32A51F60719400C84433 /* UIImageView+CacheURL.swift */,
 			);
 			path = TableViewDojo;
 			sourceTree = "<group>";
@@ -97,6 +106,14 @@
 				EF0B329E1F5ED93400C84433 /* CustomCell.swift */,
 			);
 			name = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		EF0B32A21F60259600C84433 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				EF0B32A31F6025A900C84433 /* Character.swift */,
+			);
+			name = "Custom Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0B328C1F5D702000C84433 /* ViewController.swift in Sources */,
+				EF0B32A61F60719400C84433 /* UIImageView+CacheURL.swift in Sources */,
 				EF0B329F1F5ED93400C84433 /* CustomCell.swift in Sources */,
+				EF0B32A41F6025A900C84433 /* Character.swift in Sources */,
+				EF0B32A11F60198C00C84433 /* Webservice.swift in Sources */,
 				EF0B328A1F5D702000C84433 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
